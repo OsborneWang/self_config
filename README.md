@@ -32,7 +32,7 @@ nvim --headless "+Lazy! sync" +qa   # 首次安装/同步 nvim 插件
 - tmux >= 3.3（`allow-passthrough` 需要；本配置在 3.6 验证）
 - Neovim >= 0.9 + git（LazyVim 自举，`lazy-lock.json` 锁定插件版本）
 - yazi（`y` 函数需在 shell 中定义，见下）
-- 可选：`glow`（yazi Markdown 预览）、`lazygit`（yazi 内 `gl` 快捷键）
+- 可选：`mdcat`（yazi Markdown 预览）、`lazygit`（yazi 内 `gl` 快捷键）
 
 ## 剪切板链路（OSC 52）
 
