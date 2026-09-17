@@ -5,7 +5,7 @@ edit = [
   { run = "nvim %s", block = true, desc = "nvim", for = "unix" }
 ]
 markdown = [
-  { run = "/home/osborne/.local/bin/mdcat --paginate %s1", block = true, desc = "Preview Markdown", for = "unix" }
+  { run = "mdcat --paginate %s1", block = true, desc = "Preview Markdown", for = "unix" }
 ]
 
 [open]
