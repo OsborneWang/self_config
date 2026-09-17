@@ -1,0 +1,22 @@
+[mgr]
+ratio=[3,3,10]
+[opener]
+edit = [
+  { run = "nvim %s", block = true, desc = "nvim", for = "unix" }
+]
+markdown = [
+  { run = "/home/osborne/.local/bin/mdcat --paginate %s1", block = true, desc = "Preview Markdown (mdcat)", for = "unix" }
+]
+markdown-lowdown = [
+  { run = "lowdown -tterm --term-columns=$(tput cols) --term-width=$(tput cols) %s1 | less -R", block = true, desc = "Preview Markdown (lowdown)", for = "unix" }
+]
+markdown-glow = [
+  { run = "/home/osborne/.local/bin/glow -p %s1", block = true, desc = "Preview Markdown (glow)", for = "unix" }
+]
+
+[open]
+prepend_rules = [
+  { mime = "text/markdown", use = [ "markdown", "markdown-lowdown", "markdown-glow", "edit" ] },
+  { url = "*.md", use = [ "markdown", "markdown-lowdown", "markdown-glow", "edit" ] },
+  { url = "*.markdown", use = [ "markdown", "markdown-lowdown", "markdown-glow", "edit" ] },
+]

@@ -1,0 +1,44 @@
+[[mgr.prepend_keymap]]
+on   = "q"
+run  = "noop"
+desc = "Prefix for custom q bindings"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "l" ]
+run  = "shell --block lazygit"
+desc = "Open lazygit in the current directory"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "c" ]
+run  = "plugin clipboard-sync path"
+desc = "Copy hovered path to tmux/system clipboard"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "d" ]
+run  = "plugin clipboard-sync dirname"
+desc = "Copy current directory to tmux/system clipboard"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "f" ]
+run  = "plugin clipboard-sync filename"
+desc = "Copy hovered filename to tmux/system clipboard"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "n" ]
+run  = "plugin clipboard-sync name_without_ext"
+desc = "Copy hovered filename stem to tmux/system clipboard"
+
+[[mgr.prepend_keymap]]
+on   = "y"
+run  = [ "yank", "plugin clipboard-sync selected" ]
+desc = "Yank files and sync their paths to tmux/system clipboard"
+
+[[mgr.prepend_keymap]]
+on   = "x"
+run  = [ "yank --cut", "plugin clipboard-sync selected" ]
+desc = "Cut files and sync their paths to tmux/system clipboard"
+
+[[mgr.prepend_keymap]]
+on   = [ "q", "q" ]
+run  = "quit"
+desc = "Quit yazi"
